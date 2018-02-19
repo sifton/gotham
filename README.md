@@ -1,45 +1,71 @@
-# Gotham
+<p align="center">
+  <img src="logo.svg" alt="The Gotham web framework" width="400" height="276">
+</p>
 
+A flexible web framework that promotes **stability, safety, security and speed**.
+
+[![Join the chat at https://gitter.im/gotham-rs/gotham](https://badges.gitter.im/gotham-rs/gotham.svg)](https://gitter.im/gotham-rs/gotham?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
 [![Linux build status](https://travis-ci.org/gotham-rs/gotham.svg?branch=master)](https://travis-ci.org/gotham-rs/gotham)
 
-A flexible web framework that does not sacrifice safety, security or speed.
+## Features
 
-The Gotham core team loves many of the elegant concepts that are found in dynamically typed web application frameworks, such as Rails, Phoenix and Django and aspire to achieve them with the type and memory safety guarantees provided by Rust.
-
-Gotham is stability focused. All releases of Gotham are compatible with stable Rust and that contract will never change. To ensure we remain compatible, we also regularly build against beta and nightly Rust.
-
-Gotham leverages async extensively thanks to the [Tokio project](https://tokio.rs) and is further enhanced by being built directly on top of async [Hyper](https://hyper.rs). Simple Gotham request handlers are able to complete in **µs** with very low memory requirements.
+1.  Stability focused. All releases target **stable**
+    [Rust](https://www.rust-lang.org/en-US/). This will never 
+    change. To ensure future compatibility, we also run automated builds against 
+    Rust beta and nightly releases.
+1.  Statically typed. The Gotham web framework is statically typed ensuring your
+    application is **correctly expressed** at compile time.
+1.  Async everything. By leveraging the [Tokio project](https://tokio.rs), all 
+    Gotham web framework types are async out of the box.  Our async story is 
+    further enhanced by [Hyper](https://hyper.rs), a fast server that provides 
+    an elegant layer over 
+    [stringly typed HTTP](http://wiki.c2.com/?StringlyTyped).
+1.  Blazingly fast. Measure completed requests, including the 99th percentile, 
+    in **µs**.
 
 ## License
-Gotham is licensed under your option of:
+
+Licensed under your option of:
 
 * [MIT License](LICENSE-MIT)
 * [Apache License, Version 2.0](LICENSE-APACHE)
 
-## Learning Gotham
-All of the following resources are available to assist you learning Gotham:
+## Community
 
-* [The Gotham website](https://gotham.rs)
-* [Our API documentation](https://docs.rs/gotham/)
-* [The Gotham book](https://book.gotham.rs)
-* [Our example application](https://github.com/gotham-rs/example-app)
+The following policies guide participation in our project and our community:
 
-## Help
-The Gotham core team collaborate on the [#gotham](https://chat.mibbit.com/?server=irc.mozilla.org&channel=%23gotham) channel on irc.mozilla.org. Gotham specific chat and requests for help are both very welcome here.
+* [Conduct](CONDUCT.md)
+* [Contributing](CONTRIBUTING.md)
 
-Additionally the Gotham core team often hang out in
-[#rust-webdev](https://chat.mibbit.com/?server=irc.mozilla.org&channel=%23rust-webdev) and [#rust](https://chat.mibbit.com/?server=irc.mozilla.org&channel=%23rust).
+## Learning
 
-## Policies
-Gotham is a young project that we want to create an energetic and respectful community around.
+The following resources are available to assist you learning the Gotham web
+framework:
 
-As a starting point we've adopted the following [policies](https://github.com/gotham-rs/policies) which we'd like your help in refining further.
+* [An extensive set of examples](examples)
+* [API documentation](https://docs.rs/gotham/)
+* [Gitter chatroom](https://gitter.im/gotham-rs/gotham)
+* [Twitter](https://twitter.com/gotham_rs)
+* [The Gotham web framework website](https://gotham.rs)
 
-These policies are in effect for any environment or tool that supports the Gotham project.
+## Alternatives
 
+We hope you'll find the Gotham web framework is flexible enough to meet the 
+needs of any web application you might like to build. Please 
+[have a chat with us](https://gitter.im/gotham-rs/gotham) or 
+[create an issue](https://github.com/gotham-rs/gotham/issues) if you find this 
+isn't the case, perhaps there is something the Gotham web framework can offer 
+that will help you achieve your goals.
 
-## News
-You can keep up with Gotham at:
+We do acknowledge that sometimes the choices we've made for the Gotham web
+framework may not suit the needs of all projects. If that is the case for your 
+project there are alternative Rust web frameworks you might like to consider:
 
-* [Our blog](https://gotham.rs/blog)
-* [On Twitter](https://twitter.com/gotham_rs)
+1. [Conduit](https://github.com/conduit-rust/conduit)
+1. [Iron](https://github.com/iron/iron)
+1. [Nickel](https://github.com/nickel-org/nickel.rs)
+1. [Pencil](https://github.com/fengsp/pencil)
+1. [Rocket](https://github.com/SergioBenitez/Rocket)
+1. [Rouille](https://github.com/tomaka/rouille)
+
+Explore even more suggestions at [Are we web yet?](http://www.arewewebyet.org/).

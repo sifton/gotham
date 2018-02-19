@@ -1,15 +1,15 @@
-#![recursion_limit="256"]
+#![recursion_limit = "256"]
 
 extern crate proc_macro;
-extern crate url;
-extern crate syn;
 #[macro_use]
 extern crate quote;
+extern crate syn;
 
 mod extractors;
 mod extenders;
 mod state;
 mod helpers;
+mod new_middleware;
 
 #[proc_macro_derive(PathExtractor)]
 pub fn base_path_extractor(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
@@ -39,9 +39,9 @@ pub fn state_data(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
     gen.parse().unwrap()
 }
 
-#[proc_macro_derive(FromState)]
-pub fn from_state(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
+#[proc_macro_derive(NewMiddleware)]
+pub fn new_middleware(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
     let ast = syn::parse_macro_input(&input.to_string()).unwrap();
-    let gen = state::from_state(&ast);
+    let gen = new_middleware::new_middleware(&ast);
     gen.parse().unwrap()
 }
